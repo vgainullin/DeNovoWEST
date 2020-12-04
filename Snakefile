@@ -16,8 +16,7 @@ today_info = '{0}_{1:02d}_{2:02d}'.format(current_date.year, current_date.month,
 
 
 # This doesnt seem to work with SLURM
-temp_dir = tempfile.mkdtemp(dir=rc['outpath'])
-
+#temp_dir = tempfile.mkdtemp(dir=rc['outpath'])
 temp_dir = os.path.join(rc['outpath'],'temp1')
 
 os.makedirs(temp_dir, exist_ok=True)
