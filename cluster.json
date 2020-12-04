@@ -1,0 +1,10 @@
+{
+	"__default__":
+	{
+		"account": "Name",
+		"mem": "100G",
+		"time": "12:60:0",
+		"logs": "logs/job%J.out",
+		"errors": "errors/job%J.out"
+	}
+}

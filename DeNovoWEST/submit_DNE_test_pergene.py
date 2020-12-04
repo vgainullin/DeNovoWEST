@@ -117,7 +117,7 @@ def print_jobs(nfiles, temp_dir, rates_path, weight_path, mis_weight_path, out_p
     and maybe add --pvalcap X
     '''
 
-    for i in range(1,nfiles+1):
+    for i in range(1, nfiles+1):
         dnm_file = os.path.join(temp_dir, "tmp.{0}.txt".format(i))
         outfile = os.path.join(temp_dir, "tmp.all.{0}.output".format(i))
         misoutfile = os.path.join(temp_dir, "tmp.mis.{0}.output".format(i))

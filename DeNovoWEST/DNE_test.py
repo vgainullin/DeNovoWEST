@@ -21,6 +21,7 @@ import pandas as pd
 import numpy as np
 import itertools
 import datetime
+import os
 from scipy import stats
 from probabilities import *
 from weights import *
@@ -197,7 +198,11 @@ def main():
     args = get_options()
 
     #initialise log file
-    logging.basicConfig(filename=args.output.split(".")[0]+".log",level=logging.DEBUG)
+
+    log_filename = args.output.split(".")[0]+".log"
+    os.makedirs(os.path.dirname(log_filename), exist_ok=True)
+
+    logging.basicConfig(filename=log_filename, level=logging.DEBUG)
 
     #number of females/males in DDD
     male = args.nmales
