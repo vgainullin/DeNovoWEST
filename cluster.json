@@ -2,7 +2,7 @@
 	"__default__":
 	{
 		"account": "Name",
-		"mem": "100G",
+		"mem": "200G",
 		"time": "12:60:0",
 		"logs": "logs/job%J.out",
 		"errors": "errors/job%J.out"

@@ -58,4 +58,4 @@ rule make_all:
 	output:
 		variants=temp_dir+"/all/{name}.out"
 	shell:
-		COMMAND + f"  --denovos {temp_dir}/{{wildcards.name}} --output {rc['outpath']}/missense/{{wildcards.name}}.out"
+		COMMAND + f"  --denovos {temp_dir}/{{wildcards.name}} --output {rc['outpath']}/all/{{wildcards.name}}.out"
