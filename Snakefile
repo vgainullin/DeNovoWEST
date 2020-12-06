@@ -31,7 +31,7 @@ sys.stderr.write('There are {0} genes with DNMs\n'.format(len(dnm_genes.keys()))
 PATHS = glob.glob(temp_dir+"/*.txt")
 
 NAMES = [os.path.basename(x) for x in PATHS]
-COMMAND = f"python DeNovoWEST/DNE_test.py --weightdic {rc['weightspath']} --nmales {rc['nmale']} --nfemales {rc['nfemale']}  --rates {rc['ratespath']}"
+COMMAND = f"python DeNovoWEST/DNE_test.py --weightdic {rc['weightspath']} --nsim 100000000 --nmales {rc['nmale']} --nfemales {rc['nfemale']}  --rates {rc['ratespath']}"
 
 # add pvalcap
 if rc['pvalcap'] != 1.0:
@@ -50,7 +50,7 @@ rule make_missense:
 	output:
 		variants=temp_dir+"/missense/{name}.out"
 	shell:
-		COMMAND + f" --denovos {temp_dir}/{{wildcards.name}} --output {rc['outpath']}/missense/{{wildcards.name}}.out"
+		COMMAND + f" --denovos {temp_dir}/{{wildcards.name}} --output {temp_dir}/missense/{{wildcards.name}}.out"
 
 rule make_all:
 	input:
@@ -58,4 +58,4 @@ rule make_all:
 	output:
 		variants=temp_dir+"/all/{name}.out"
 	shell:
-		COMMAND + f"  --denovos {temp_dir}/{{wildcards.name}} --output {rc['outpath']}/all/{{wildcards.name}}.out"
+		COMMAND + f"  --denovos {temp_dir}/{{wildcards.name}} --output {temp_dir}/all/{{wildcards.name}}.out"
