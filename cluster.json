@@ -2,8 +2,11 @@
 	"__default__":
 	{
 		"account": "Name",
-		"mem": "200G",
-		"time": "12:60:0",
+		"mem": "180G",
+		"ntasks-per-node":4,
+		"ntasks":4,
+		"cpus-per-task":1,
+		"time": "24:60:0",
 		"logs": "logs/job%J.out",
 		"errors": "errors/job%J.out"
 	}
