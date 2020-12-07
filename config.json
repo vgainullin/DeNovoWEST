@@ -2,10 +2,10 @@
   "ratespath": "rates/all_rates_cadd_maf_shet_2020_03_05.txt.gz",
   "weightspath": "input/weights_ppv_2020_01_17.tab",
   "misweightspath": "input/weights_ppv_missense_2020_01_17.tab",
-  "denovospath": "input/gdx_yale_dnm.txt.gz",
+  "denovospath": "input/file_name.txt.gz",
   "outpath": "output",
-  "nmale": 180,
-  "nfemale":116,
+  "nmale": 1000,
+  "nfemale":1000,
   "onlyprint": 0,
   "ngenesperfile": 10,
   "pvalcap": 0.1
