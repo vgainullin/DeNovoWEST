@@ -31,7 +31,9 @@ sys.stderr.write('There are {0} genes with DNMs\n'.format(len(dnm_genes.keys()))
 PATHS = glob.glob(temp_dir+"/*.txt")
 
 NAMES = [os.path.basename(x) for x in PATHS]
-COMMAND = f"python DeNovoWEST/DNE_test.py --weightdic {rc['weightspath']} --nsim 100000000 --nmales {rc['nmale']} --nfemales {rc['nfemale']}  --rates {rc['ratespath']}"
+COMMAND = f"python DeNovoWEST/DNE_test.py --nsim 1000000000 --nmales {rc['nmale']} --nfemales {rc['nfemale']}  --rates {rc['ratespath']}"
+ALLCOM = COMMAND + f" --weightdic {rc['weightspath']}"
+MISCOM = COMMAND + f" --weightdic {rc['misweightspath']}"
 
 # add pvalcap
 if rc['pvalcap'] != 1.0:
