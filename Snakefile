@@ -52,7 +52,7 @@ rule make_missense:
 	output:
 		variants=temp_dir+"/missense/{name}.out"
 	shell:
-		COMMAND + f" --denovos {temp_dir}/{{wildcards.name}} --output {temp_dir}/missense/{{wildcards.name}}.out"
+		MISCOM + f" --denovos {temp_dir}/{{wildcards.name}} --output {temp_dir}/missense/{{wildcards.name}}.out"
 
 rule make_all:
 	input:
@@ -60,4 +60,4 @@ rule make_all:
 	output:
 		variants=temp_dir+"/all/{name}.out"
 	shell:
-		COMMAND + f"  --denovos {temp_dir}/{{wildcards.name}} --output {temp_dir}/all/{{wildcards.name}}.out"
+		ALLCOM + f"  --denovos {temp_dir}/{{wildcards.name}} --output {temp_dir}/all/{{wildcards.name}}.out"
